@@ -6,6 +6,10 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 function Header(props) {
   const [search, setSearch] = useState("");
 
+  const userId = JSON.parse(localStorage.getItem("userdetails"))._id;
+  const token = JSON.parse(localStorage.getItem("token"));
+  const name = JSON.parse(localStorage.getItem("userdetails")).email.split("@")[0];
+
   useEffect(() => {
     searchedEmail();
   }, [search]);
@@ -36,7 +40,7 @@ function Header(props) {
       <div className="total-contact">
         <h4>Total Contacts</h4>
       </div>
-  
+      {/*//================== SEARCH BAR ====== */}
       <div className="search-bar">
         <input
           className="search-by-email"
@@ -47,12 +51,13 @@ function Header(props) {
         />
       </div>
 
+      {/* //================= USER ADMIN ========== */}
       <div className="header-user-admin">
         <div>
           <AccountCircleIcon sx={{ fontSize: 40 }} />
         </div>
         <div className="header-user-admin-name">
-          <p className="name">Alam</p>
+          <p className="name">{name}</p>
           <p className="admin">Super Admin</p>
         </div>
       </div>

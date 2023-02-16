@@ -2,7 +2,7 @@ const express=require('express');
 const contact=require('../models/contacts')
 const multer=require('multer')
 const csv = require('csvtojson');
-
+const verify=require('../Authorization/auth')
 const router= express.Router()
 router.use(express.json())
 
@@ -18,14 +18,13 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage });
 
-  router.post('/addcontact', upload.single('file'), (req, res) => {
+  router.post('/addcontact',verify, upload.single('file'), (req, res) => {
     const userID = req.body.userId
     
     csv()
       .fromFile(req.file.path)
       .then(jsonData => {
         const dataWithUserId = jsonData.map(data => ({...data, userID}));
-
         contact.insertMany(dataWithUserId, function(error, documents) {
           if (error) return res.status(500).send(error);
           res.status(200).json({data:documents});
