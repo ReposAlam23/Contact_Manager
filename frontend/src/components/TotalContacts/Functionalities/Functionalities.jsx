@@ -4,13 +4,17 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import ImportExportIcon from "@mui/icons-material/ImportExport";
-import exportFile from "./../../images/exportFile.png";
-import ImportFile from "../../ImportFile";
-import ImportComplete from "../../importComplete";
-import DeleteContactComfirmation from "../../DeleteContactComfirmation";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import DeleteSuccessfullyFile from "../../DeleteSuccessfullyFile";
+import exportFile from "./../../images/exportFile.png";
+import ImportFile from "./ImportFile"
+import ImportComplete from "./importComplete"
+import DeleteContactComfirmation from "./DeleteContactComfirmation";
+import DeleteSuccessfullyFile from "./DeleteSuccessfullyFile";
+// import ImportFile from "../../ImportFile";
+// import ImportComplete from "../../importComplete";
+// import DeleteContactComfirmation from "../../DeleteContactComfirmation";
+// import DeleteSuccessfullyFile from "../../DeleteSuccessfullyFile";
 
 const Functionalities = (props) => {
   const [importFile, setImportFile] = useState(false);

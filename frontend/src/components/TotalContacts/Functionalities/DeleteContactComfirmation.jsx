@@ -1,7 +1,7 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { blue } from "@mui/material/colors";
-import "./delcontactinfo.css";
+import "./DeleteContactComfirmation.css";
 import Button from "@mui/material/Button";
 import axios from "axios";
 

@@ -8,7 +8,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { red, blue } from "@mui/material/colors";
 import EditIcon from "@mui/icons-material/Edit";
 import Tooltip from "@mui/material/Tooltip";
-import DeleteContactComfirmation from "../DeleteContactComfirmation";
+import DeleteContactComfirmation from "./Functionalities/DeleteContactComfirmation";
+// import DeleteContactComfirmation from "../DeleteContactComfirmation";
 
 //    TOOL-TIP IMPLEMENTATION
 

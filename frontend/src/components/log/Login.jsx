@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import dontsPic from './images/Group 100.png'
+import dontsPic from "./../images/Group 100.png"
+// import dontsPic from './images/Group 100.png'
 import { Link } from 'react-router-dom';
 import './login.css';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -48,7 +49,7 @@ const Login = (props) => {
     return (
         <React.Fragment>
             <main className='main-cont '>
-                <img className='img-1' src={require('./images/Ellipse 31.png')} alt="round"/>
+                <img className='img-1' src={require('../images/Ellipse 31.png')} alt="round"/>
                 {/* <section className='row container border m-5 br-5 rounded-2 form-container'>
                     <div className="col"> */}
                     <section className='form-container col-lg-10'>
@@ -97,7 +98,7 @@ const Login = (props) => {
                     {/* </div>
                 </section> */}
                 </section>
-                <img className='img-2'  src={require('./images/Ellipse 32.png')} alt="right dot"/>
+                <img className='img-2'  src={require('../images/Ellipse 32.png')} alt="right dot"/>
                 <Validation trigger={valid}>
                 <div className='card-message'>
                     <h3>{message.status}</h3>

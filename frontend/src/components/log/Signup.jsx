@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import './login.css';
-import dontsPic from'./images/Group 100.png'
+import dontsPic from "./../images/Group 100.png"
+// import dontsPic from'./images/Group 100.png'
 import { Link } from 'react-router-dom';
 import EmailIcon from '@mui/icons-material/Email';
 import EnhancedEncryptionIcon from '@mui/icons-material/EnhancedEncryption';
@@ -19,7 +20,7 @@ const Signup =(props)=> {
     const getUserDetails = JSON.parse(localStorage.getItem("token"))
 if(getUserDetails){
     navigate("/main")
-}
+} 
 },[])
   const handleSubmit=async(e)=>{
     e.preventDefault()
@@ -36,23 +37,18 @@ if(getUserDetails){
                 setMessage(e?.response?.data)
                 setValid(true)
             }) 
-        }
-       
-    }
-    else{
+        } 
+    }else{
         setMessage({status:"Note!",message:"Password and Confirm Password doesn't matched"})
         setValid(true)
     }
-    
-     
-     
+
 }
     return (
         <React.Fragment>
         <main className='main-cont'>
-            <img className='img-1' src={require('./images/Ellipse 31.png')} alt="round"/>
+            <img className='img-1' src={require('../images/Ellipse 31.png')} alt="round"/>
             <section className='form-container col-lg-10'>
-                
 
                         <img src={dontsPic} className="dotsImg1"  alt="dots" />
           
@@ -98,7 +94,7 @@ if(getUserDetails){
                     </div>
                 
             </section>
-            <img className='img-2'  src={require('./images/Ellipse 32.png')} alt="right dot"/>
+            <img className='img-2'  src={require('../images/Ellipse 32.png')} alt="right dot"/>
             <Validation trigger={valid}>
                 <div className='card-message'>
                     <h3>{message.status}</h3>
